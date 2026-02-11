@@ -13,6 +13,7 @@
             --bg: #0a0a0a;
             --card-bg: #151515;
             --text: #ffffff;
+            --rules-color: #ffcc00; /* Цвет для кнопки правил */
         }
 
         body {
@@ -23,7 +24,6 @@
             overflow-x: hidden;
         }
 
-        /* Анимация свечения для IP */
         @keyframes glow {
             0% { text-shadow: 0 0 10px #ff0000; }
             50% { text-shadow: 0 0 30px #ff0000, 0 0 40px #ff0000; }
@@ -57,11 +57,11 @@
             margin-top: 30px;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
-        .social-link {
+        .nav-link {
             text-decoration: none;
             color: white;
             background: var(--primary);
@@ -69,11 +69,26 @@
             border-radius: 5px;
             font-size: 0.9rem;
             transition: 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
-        .social-link:hover {
+        .nav-link:hover {
             transform: scale(1.1);
             box-shadow: 0 0 20px var(--primary);
+        }
+
+        /* Особенный стиль для правил */
+        .rules-btn {
+            background: none;
+            border: 2px solid var(--rules-color);
+            color: var(--rules-color);
+        }
+
+        .rules-btn:hover {
+            background: var(--rules-color);
+            color: black;
+            box-shadow: 0 0 20px var(--rules-color);
         }
 
         .container {
@@ -117,12 +132,7 @@
         .kit-name { font-size: 1.6rem; margin-bottom: 15px; }
         .kit-desc { color: #aaa; font-size: 0.8rem; line-height: 1.6; margin-bottom: 20px; min-height: 80px;}
         
-        .price {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
+        .price { font-size: 1.8rem; margin-bottom: 20px; color: #fff; }
         .free-label { color: #00ff00; }
 
         .buy-btn {
@@ -154,8 +164,10 @@
     <div class="ip-address">ЗАХОДИ: roundeseck.aternos.me:35268</div>
     
     <div class="socials">
-        <a href="https://t.me/roundeseck" target="_blank" class="social-link">ТГ КАНАЛ</a>
-        <a href="https://discord.gg/TEqUAC2hMW" target="_blank" class="social-link" style="background: #5865F2;">ДИСКОРД</a>
+        <a href="https://rules.mc.roundeseck.v6.rocks/" target="_blank" class="nav-link rules-btn">ПРАВИЛА</a>
+        
+        <a href="https://t.me/roundeseck" target="_blank" class="nav-link">ТГ КАНАЛ</a>
+        <a href="https://discord.gg/TEqUAC2hMW" target="_blank" class="nav-link" style="background: #5865F2;">ДИСКОРД</a>
     </div>
 </header>
 
@@ -165,7 +177,7 @@
     <div class="kits-grid">
         <div class="kit-card">
             <div class="kit-name">START</div>
-            <div class="kit-desc">ФУЛЛ НЕЗЕРКА (АВТОМАТОМ) + 32 ГЭПЛА</div>
+            <div class="kit-desc">ФУЛЛ НЕЗЕРКА (ВЫДАЕТСЯ АВТОМАТОМ) + 32 ГЭПЛА</div>
             <div class="price free-label">БЕСПЛАТНО</div>
             <a href="https://t.me/middlecon" class="buy-btn">ЗАБРАТЬ</a>
         </div>
